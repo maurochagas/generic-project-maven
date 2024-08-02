@@ -1,7 +1,7 @@
 package com.genericprojectmaven.generic.controller;
 
 import com.genericprojectmaven.generic.service.GenericService;
-import com.genericprojectmaven.generic.utils.Updatable;
+import com.genericprojectmaven.generic.utils.IUpdatable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-public abstract class GenericController<T extends Updatable<T>, ID> implements IGenericController<T, ID> {
+public abstract class GenericController<T extends IUpdatable<T>, ID> implements IGenericController<T, ID> {
 
     private final GenericService<T, ID> service;
 

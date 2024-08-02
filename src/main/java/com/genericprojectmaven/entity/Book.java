@@ -1,5 +1,6 @@
 package com.genericprojectmaven.entity;
 
+import com.genericprojectmaven.generic.utils.IUpdatable;
 import com.genericprojectmaven.generic.utils.Updatable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +18,7 @@ import java.util.UUID;
 @Setter
 @ToString
 @RequiredArgsConstructor
-public class Book implements Updatable<Book> {
+public class Book implements IUpdatable<Book> {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -27,9 +28,7 @@ public class Book implements Updatable<Book> {
 
     @Override
     public void updateProperties(Book book) {
-        this.title = book.getTitle();
-        this.author = book.getAuthor();
-        this.category = book.getCategory();
+        Updatable.updateProperties(this, book);
     }
 
 }
