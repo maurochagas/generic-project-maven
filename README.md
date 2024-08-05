@@ -1,0 +1,3 @@
+Hello!! 👋
+
+This is a simple project that I'm doing for learning purposes! Basically, I realized that there are a series of processes that I constantly do when I create a web application with Java using Spring Boot. I wanted something that would speed up my work without taking away my control over the code, so I decided to start building a dependency. I don't know exactly how to do this, but it's better to learn by doing than by doing nothing!
